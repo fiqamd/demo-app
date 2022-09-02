@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import Navbar from './components/Navbar'
+import PersonName from './components/PersonName';
+import LeftItems from './components/LeftItems';
+import LeftButton from './components/LeftButton';
+import LeftPage from './components/LeftPage';
+import MessageCol from './components/MessageCol';
+import MsgDialogReceiver from './components/MsgDialogReceiver';
+import MsgDialogSender from './components/MsgDialogSender';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Navbar />
+      <div className='flex justify-center '>
+        <div className='ml-10'>
+          <LeftPage/>
+        </div>
+        <div className='flex-auto'>
+          <MessageCol/>
+        </div>
+      </div>
+      {/* <MsgDialogReceiver/> */}
+      {/* <MsgDialogSender/> */}
     </div>
   );
 }
